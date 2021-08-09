@@ -59,7 +59,7 @@ resource "aws_subnet" "public" {
   tags = {
     #Name = "Public ${var.name}-${var.env}"
     Name                              = each.value["name"]
-    "kubernetes.io/role/internal-elb" = 1
+    "kubernetes.io/role/elb" = 1
   }
 }
 
